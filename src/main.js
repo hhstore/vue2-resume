@@ -9,7 +9,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
+  router,   // 路由匹配
   template: '<App/>',
-  components: { App }
+  components: { App }   // 程序入口
 })
