@@ -14,20 +14,10 @@
 
     <router-view></router-view>
 
-    <!--简历部分-->
-    <!--<resume></resume>-->
   </div>
 </template>
 
 <script>
-  //  import Resume from './components/Resume.vue'
-
-  export default {
-    name: 'app',
-    components: {
-//      Resume
-    }
-  }
 
 </script>
 
