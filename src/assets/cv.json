@@ -1,0 +1,218 @@
+{
+  "profile": {
+    "name": "hhstore",
+    "email": "xxx@gmail.com",
+    "mobile": "171xxxxxx",
+    "birthday": "19xx.xx",
+    "website": [
+      {
+        "name": "github",
+        "url": "github.com/xxxx"
+      },
+      {
+        "name": "blog",
+        "url": "www.xxxx.com"
+      },
+      {
+        "name": "zhihu",
+        "url": "zhihu.com/xxxx"
+      },
+      {
+        "name": "douban",
+        "url": "douban.com/xxxx"
+      }
+    ],
+    "expect": {
+      "position": "后台开发工程师",
+      "location": "上海",
+      "salary": "200k+"
+    },
+    "status": "已离职"
+  },
+  "edu": [
+    {
+      "school": "xxxx大学1",
+      "major": "xxx专业",
+      "duration": "201x.09-201x.06",
+      "edu_level": "本科(硕士)"
+    },
+    {
+      "school": "xxxx大学2",
+      "major": "xxx专业",
+      "duration": "201x.09-201x.06",
+      "edu_level": "本科(硕士)"
+    }
+  ],
+  "work": [
+    {
+      "company": "xx 公司",
+      "duration": "201x.01 - 201x.10",
+      "title": "xx 工程师",
+      "info": [
+        "xxxx",
+        "xxxx",
+        "xxxx",
+        "xxxx"
+      ]
+    },
+    {
+      "company": "xx 公司",
+      "duration": "201x.01 - 201x.10",
+      "title": "xx 工程师",
+      "info": [
+        "xxxx",
+        "xxxx",
+        "xxxx",
+        "xxxx"
+      ]
+    }
+  ],
+  "project": {
+    "personal": [
+      {
+        "name": "xxxx project",
+        "url": "",
+        "duration": "201x.02 - 201x.03",
+        "brief": "项目简要说明",
+        "tech_architecture": "python+java+flask+redis+mongodb+mysql",
+        "contribution": [
+          {
+            "item": "职责",
+            "desc": [
+              "详细描述"
+            ]
+          },
+          {
+            "item": "成果",
+            "desc": [
+              "成果1",
+              "成果2",
+              "xxxxx",
+              "xxxxx"
+            ]
+          },
+          {
+            "item": "其他",
+            "desc": []
+          }
+        ]
+      },
+      {
+        "name": "xxxx project",
+        "duration": "201x.02 - 201x.03",
+        "brief": "项目简要说明",
+        "tech_architecture": "python+java+flask+redis+mongodb+mysql",
+        "contribution": [
+          {
+            "item": "职责",
+            "desc": [
+              "详细描述"
+            ]
+          },
+          {
+            "item": "成果",
+            "desc": [
+              "成果1",
+              "成果2",
+              "xxxxx",
+              "xxxxx"
+            ]
+          },
+          {
+            "item": "其他",
+            "desc": []
+          }
+        ]
+      }
+    ],
+    "working": [
+      {
+        "name": "xxxx project",
+        "url": "",
+        "duration": "201x.02 - 201x.03",
+        "brief": "项目简要说明",
+        "tech_architecture": "python+java+flask+redis+mongodb+mysql",
+        "contribution": [
+          {
+            "item": "职责",
+            "desc": [
+              "详细描述"
+            ]
+          },
+          {
+            "item": "成果",
+            "desc": [
+              "成果1",
+              "成果2",
+              "xxxxx",
+              "xxxxx"
+            ]
+          },
+          {
+            "item": "其他",
+            "desc": []
+          }
+        ]
+      },
+      {
+        "name": "xxxx project",
+        "duration": "201x.02 - 201x.03",
+        "brief": "项目简要说明",
+        "tech_architecture": "python+java+flask+redis+mongodb+mysql",
+        "contribution": [
+          {
+            "item": "职责",
+            "desc": [
+              "详细描述"
+            ]
+          },
+          {
+            "item": "成果",
+            "desc": [
+              "成果1",
+              "成果2",
+              "xxxxx",
+              "xxxxx"
+            ]
+          },
+          {
+            "item": "其他",
+            "desc": []
+          }
+        ]
+      }
+    ]
+  },
+  "honour": [
+    {
+      "item": "荣誉1",
+      "date": "201x-10-11",
+      "desc": "xxxxxxxxx"
+    },
+    {
+      "item": "荣誉2",
+      "date": "201x-10-11",
+      "desc": "xxxxxxxxx"
+    }
+  ],
+  "etc": [
+    {
+      "title": "skills",
+      "desc": [
+        "xxx, xxx, xxx",
+        "xxx, xxx, xxx",
+        "xxx, xxx, xxx",
+        "xxx, xxx, xxx"
+      ]
+    },
+    {
+      "title": "summary",
+      "desc": [
+        "xxx, xxx, xxx",
+        "xxx, xxx, xxx",
+        "xxx, xxx, xxx",
+        "xxx, xxx, xxx"
+      ]
+    }
+  ]
+}
