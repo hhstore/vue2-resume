@@ -2,7 +2,7 @@
 
 > 基于 vue2.js 和 semantic-ui 实现的 简历模板生成工具.
 > 可利用 chrome 导出 PDF 打印.
-> 
+>
 
 
 ## Build Setup
@@ -43,5 +43,11 @@ npm run e2e
 # run all tests
 npm test
 ```
+
+## Print:
+
+- 调用浏览器自带打印功能, 打印简历.
+- chrome 的打印功能, 可以保存导出 `PDF` 文件.
+
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
