@@ -1,7 +1,19 @@
 <template>
   <!--简历-->
   <div class="cv-main">
-    <div class="ui  segment">
+
+    <!--打印按钮-->
+    <div id="cv-export">
+      <h3>
+
+        <button v-on:click="exportPDF" class="ui orange button">
+          <i class="print icon"></i>打印
+        </button>
+      </h3>
+    </div>
+
+    <!--简历内容-->
+    <div class="ui  segment" id="cv-content">
       <!--个人信息-->
       <div class="ui grid">
         <div class="three column row">
@@ -257,7 +269,7 @@
 
             <!--成果-->
             <div class="sixteen wide column left aligned" v-for="v in item.desc">
-              <h5 class="cv-fix-content-item" ><i class="pointing right red icon" ></i> {{ v }}</h5>
+              <h5 class="cv-fix-content-item"><i class="pointing right red icon"></i> {{ v }}</h5>
             </div>
           </div>
         </div>
@@ -277,7 +289,6 @@
 
 <script>
   import * as cv from '../assets/cv.json'    // cv-2017.json
-  //
 
   export default {
     name: 'resume',
@@ -286,6 +297,16 @@
     data () {
       return {
         cv: cv
+      }
+    },
+
+    methods: {
+      exportPDF: function () {
+        // 隐藏打印按钮
+        document.getElementById('cv-export').style.display = 'none'
+        window.print()
+        // 恢复打印按钮
+        document.getElementById('cv-export').style.display = ''
       }
     }
   }
