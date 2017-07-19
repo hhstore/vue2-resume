@@ -1,67 +1,49 @@
 {
   "profile": {
-    "name": "hhstore",
-    "email": "xxx@gmail.com",
-    "mobile": "171xxxxxx",
+    "name": "xx",
+    "email": "xxxxx@gmail.com",
+    "mobile": "171xxxxxxxxx",
     "birthday": "19xx.xx",
-    "website": [
-      {
-        "name": "github",
-        "url": "github.com/xxxx"
-      },
-      {
-        "name": "blog",
-        "url": "www.xxxx.com"
-      },
-      {
-        "name": "zhihu",
-        "url": "zhihu.com/xxxx"
-      },
-      {
-        "name": "douban",
-        "url": "douban.com/xxxx"
-      }
-    ],
+    "address": "上海•xx",
+    "website": {
+      "github": "github.com/xxxx",
+      "blog": "www.xxxxx.net",
+      "zhihu": "zhihu.com/xxxx",
+      "douban": "douban.com/pepole/xxxx"
+    },
     "expect": {
       "position": "后台开发工程师",
       "location": "上海",
-      "salary": "200k+"
+      "salary": "220k+"
     },
     "status": "已离职"
   },
   "edu": [
     {
-      "school": "xxxx大学1",
-      "major": "xxx专业",
-      "duration": "201x.09-201x.06",
-      "edu_level": "本科(硕士)"
-    },
-    {
-      "school": "xxxx大学2",
-      "major": "xxx专业",
-      "duration": "201x.09-201x.06",
-      "edu_level": "本科(硕士)"
+      "school": "xxxx大学",
+      "major": "xxxx专业",
+      "duration": "200x.09-201x.06",
+      "edu_level": "统招本科",
+      "cet_level": "英语6级"
     }
   ],
   "work": [
     {
-      "company": "xx 公司",
-      "duration": "201x.01 - 201x.10",
-      "title": "xx 工程师",
+      "company": "xxxx有限公司",
+      "location": "city",
+      "duration": "2016.05 - 2017.04",
+      "title": "高级软件工程师",
       "info": [
-        "xxxx",
-        "xxxx",
         "xxxx",
         "xxxx"
       ]
     },
     {
-      "company": "xx 公司",
-      "duration": "201x.01 - 201x.10",
-      "title": "xx 工程师",
+      "company": "xxxx有限公司",
+      "location": "city",
+      "duration": "2014.12 - 2016.05",
+      "title": "后台开发工程师",
       "info": [
-        "xxxx",
-        "xxxx",
         "xxxx",
         "xxxx"
       ]
@@ -79,16 +61,15 @@
           {
             "item": "职责",
             "desc": [
-              "详细描述"
+              "职责1",
+              "职责2"
             ]
           },
           {
             "item": "成果",
             "desc": [
               "成果1",
-              "成果2",
-              "xxxxx",
-              "xxxxx"
+              "成果2"
             ]
           },
           {
@@ -98,7 +79,8 @@
         ]
       },
       {
-        "name": "xxxx project",
+        "name": "xxxx project2",
+        "url": "",
         "duration": "201x.02 - 201x.03",
         "brief": "项目简要说明",
         "tech_architecture": "python+java+flask+redis+mongodb+mysql",
@@ -106,16 +88,15 @@
           {
             "item": "职责",
             "desc": [
-              "详细描述"
+              "职责1",
+              "职责2"
             ]
           },
           {
             "item": "成果",
             "desc": [
               "成果1",
-              "成果2",
-              "xxxxx",
-              "xxxxx"
+              "成果2"
             ]
           },
           {
@@ -127,7 +108,9 @@
     ],
     "working": [
       {
-        "name": "xxxx project",
+        "name": "xxx APP(xxx)",
+        "company": "xxxx有限公司",
+        "title": "架构师/项目经理",
         "url": "",
         "duration": "201x.02 - 201x.03",
         "brief": "项目简要说明",
@@ -143,9 +126,7 @@
             "item": "成果",
             "desc": [
               "成果1",
-              "成果2",
-              "xxxxx",
-              "xxxxx"
+              "成果2"
             ]
           },
           {
@@ -155,7 +136,10 @@
         ]
       },
       {
-        "name": "xxxx project",
+        "name": "xxx APP(xxx)",
+        "company": "xxxx有限公司",
+        "title": "架构师/项目经理",
+        "url": "",
         "duration": "201x.02 - 201x.03",
         "brief": "项目简要说明",
         "tech_architecture": "python+java+flask+redis+mongodb+mysql",
@@ -170,9 +154,7 @@
             "item": "成果",
             "desc": [
               "成果1",
-              "成果2",
-              "xxxxx",
-              "xxxxx"
+              "成果2"
             ]
           },
           {
@@ -197,7 +179,7 @@
   ],
   "etc": [
     {
-      "title": "skills",
+      "title": "技能",
       "desc": [
         "xxx, xxx, xxx",
         "xxx, xxx, xxx",
@@ -206,7 +188,7 @@
       ]
     },
     {
-      "title": "summary",
+      "title": "综述",
       "desc": [
         "xxx, xxx, xxx",
         "xxx, xxx, xxx",
