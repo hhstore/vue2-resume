@@ -20,3 +20,12 @@
 ## CDN:
 
 - [BootCDN](http://www.bootcdn.cn/)
+
+
+## export PDF:
+- 都不好用.直接调用浏览器打印功能.
+- [sof](https://stackoverflow.com/questions/6896592/is-it-possible-to-save-html-page-as-pdf-using-javascript-or-jquery)
+- [SOF](https://stackoverflow.com/questions/18191893/generate-pdf-from-html-in-div-using-javascript)
+- [jsPDF](https://github.com/MrRio/jsPDF)
+- [pdfmake](https://github.com/bpampuch/pdfmake)
+
