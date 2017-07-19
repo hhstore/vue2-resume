@@ -1,172 +1,271 @@
 <template>
+  <!--简历-->
+  <div class="cv-main">
+    <div class="ui  segment">
+      <!--个人信息-->
+      <div class="ui grid">
+        <div class="three column row">
+          <!--姓名-->
+          <div class="column"><h1 class="ui green header left aligned"> {{cv.profile.name}} </h1></div>
+          <div class="column"></div>
+          <!--岗位/薪资-->
+          <div class="column"><h3>期望薪资: {{cv.profile.expect.salary}} </h3></div>
+        </div>
+      </div>
 
-  <div class="hello">
+      <!--个人信息-->
+      <div class="ui vertical green segment">
+        <div class="ui grid">
+          <!--联系方式-->
+          <div class="four column row cv-fix-height">
+            <div class="column left aligned">
+              <h4>
+                <i class="call icon green"></i>
+                <a class="header" href="#">{{cv.profile.mobile}}</a>
+              </h4>
+            </div>
+            <div class="column left aligned">
+              <h4>
+                <i class="mail icon green"></i>
+                <a class="header" href="#">{{cv.profile.email}}</a>
+              </h4>
+            </div>
+            <div class="column left aligned">
+              <h4>
+                <i class="male icon green"></i><a class="header" href="#">{{ cv.profile.birthday }}</a>
+                <i class="marker icon green"></i><a class="header" href="#">{{ cv.profile.address }}</a>
 
-    <div>
-      <h2>-----------简历--------------</h2>
-    </div>
+              </h4>
+            </div>
+            <div class="column left aligned">
+              <h4>
+                <i class="configure icon green"></i>
+                <!--岗位/薪资-->
+                <a class="header" href="#">目标岗位:{{cv.profile.expect.position }}</a>
+              </h4>
+            </div>
 
-
-    <div>
-
-      <h3>个人简介</h3>
-      <!--个人简介-->
-      <section class="resume-profile">
-        <section class="resume-title">
-          <li>姓名: {{cv.profile.name}}</li>
-          <li>目标岗位: {{cv.profile.expect.position }}</li>
-          <li>期望薪资: {{cv.profile.expect.salary}}</li>
-        </section>
-
-        <!--联系方式-->
-        <address class="resume-contact">
-          <div>
-            <li class="resume-tel"> 手机号: <a href="#">{{cv.profile.mobile}}</a></li>
-            <li class="resume-email"> 邮箱: <a href="'mailto:'+cv.profile.email">{{cv.profile.email}}</a></li>
-            <li>出生日期: {{ cv.profile.birthday }}</li>
           </div>
 
-          <div>
-            <li v-for="item in cv.profile.website">
-              {{ item.name }} : {{item.url }}
-            </li>
+          <!--website-->
+          <div class="four column row cv-fix-height">
+            <div class="column left aligned">
+              <h4>
+                <i class="world icon green"></i>
+                <a class="header" href="#">{{cv.profile.website.blog}}</a>
+              </h4>
+            </div>
+            <div class="column left aligned">
+              <h4>
+                <i class="github alternate icon green"></i>
+                <a class="header" href="#">{{cv.profile.website.github}}</a>
+              </h4>
+            </div>
+            <div class="column left aligned">
+              <h4>
+                <i class="rocket icon green"></i>
+                <a class="header" href="#">{{cv.profile.website.zhihu}}</a>
+              </h4>
+            </div>
+            <div class="column left aligned">
+              <h4>
+                <i class="book icon green"></i>
+                <a class="header" href="#">{{cv.profile.website.douban}}</a>
+              </h4>
+            </div>
+
           </div>
-        </address>
+        </div>
+      </div>
 
-      </section>
-
-      <h3>学历部分</h3>
       <!--学历-->
-      <section class="resume-edu">
-        <li v-for="item in cv.edu">
-          {{ item.school }}
-          {{ item.major }}
-          {{ item.duration }}
-          {{ item.edu_level }}
-        </li>
-      </section>
+      <div class="ui vertical green segment">
+        <h3 class="ui blue header left aligned ">
+          <i class="student icon green"></i>学历
+        </h3>
+        <div class="ui grid">
+          <div class="five column row cv-fix-height" v-for="item in cv.edu">
+            <div class="column"><h4>{{ item.school }}</h4></div>
+            <div class="column"><h4>{{ item.major }}</h4></div>
+            <div class="column"><h4>{{ item.duration }}</h4></div>
+            <div class="column"><h4>{{ item.edu_level }}</h4></div>
+            <div class="column"><h4>{{ item.cet_level }}</h4></div>
+          </div>
+        </div>
+      </div>
 
-    </div>
-
-
-    <div>
-      <h3>工作经历</h3>
       <!--工作经历-->
-      <section class="resume-work">
-        <div v-for="item in cv.work">
-          <span> <a href="">{{ item.company }}</a></span>
-          <span> <a href="">{{ item.duration }}</a></span>
-          <span> <a href="">{{ item.title }}</a></span>
-          <span> <a href="">{{ item.info }}</a></span>
+      <div class="ui vertical green segment">
+        <h3 class="ui blue header left aligned">
+          <i class="sitemap icon green"></i>工作经历
+        </h3>
+
+        <!--工作信息-->
+        <div class="ui grid">
+
+          <div class="four column row cv-fix-height" v-for="item in cv.work">
+            <!--履职时间-->
+            <div class="four wide column left aligned">
+              <h4>{{ item.duration }}</h4>
+            </div>
+            <!--岗位-->
+            <div class="four wide column left aligned">
+              <h4>{{ item.title }}</h4>
+            </div>
+            <!--公司名称-->
+            <div class="four wide column right aligned">
+              <h4>{{ item.company }}</h4>
+            </div>
+            <!--公司所在地-->
+            <div class="four wide column right aligned">
+              <h4>{{ item.location }}</h4>
+            </div>
+
+            <!--岗位职责-->
+            <div class="sixteen wide column left aligned" v-for="v in item.info">
+              <h5><i class="tag green icon"></i> {{ v }}</h5>
+            </div>
+
+          </div>
         </div>
-      </section>
+      </div>
+
+      <!--项目-->
+      <div class="ui vertical green segment">
+        <h3 class="ui blue header left aligned">
+          <i class="cubes icon green"></i>项目
+        </h3>
+
+        <!--企业项目-->
+        <div class="ui orange segment">
+          <h4 class="ui orange header left aligned">
+            企业项目
+          </h4>
+
+          <div class="ui grid">
+
+            <div class="four column row cv-fix-height" v-for="item in cv.project.working">
+              <!--项目名称-->
+              <div class="four wide column left aligned">
+                <h4><i class="cube icon green"></i>{{ item.name }}</h4>
+              </div>
+              <!--项目开发时间-->
+              <div class="four wide column left aligned">
+                <h4>{{ item.duration }}</h4>
+              </div>
+
+              <!--职责-->
+              <div class="four wide column right aligned">
+                <h4>{{ item.title }}</h4>
+              </div>
+              <!--公司-->
+              <div class="four wide column right aligned">
+                <h4>{{ item.company }}</h4>
+              </div>
+
+              <!--项目介绍-->
+              <div class="sixteen wide column left aligned">
+                <h5><i class="tag green icon"></i>项目简介: {{ item.brief }}</h5>
+              </div>
+
+              <!--技术栈-->
+              <div class="sixteen wide column left aligned">
+                <h5><i class="tag green icon"></i>技术栈: {{ item.tech_architecture }}</h5>
+              </div>
+
+              <!--成果-->
+              <div class="sixteen wide column left aligned" v-for="v in item.contribution">
+                <h5><i class="tag green icon"></i> {{ v.item }}</h5>
+                <!--具体成果-->
+                <div class="sixteen wide column left aligned" v-for="vv in v.desc">
+                  <div class="cv-fix-content-item"><i class="pointing right red icon"></i> {{ vv }}</div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+        <!--个人项目-->
+        <div class="ui orange segment">
+          <h4 class="ui orange header left aligned">个人项目</h4>
+
+          <div class="ui grid">
+
+            <div class="four column row cv-fix-height" v-for="item in cv.project.personal">
+              <!--项目名称-->
+              <div class="four wide column left aligned">
+                <h4><i class="cube icon green"></i>{{ item.name }}</h4>
+              </div>
+              <!--项目开发时间-->
+              <div class="four wide column left aligned">
+                <h4>{{ item.duration }}</h4>
+              </div>
+
+              <!--项目地址-->
+              <div class="four wide column right aligned">
+                <h4>{{ item.url }}</h4>
+              </div>
+
+              <!--职责-->
+              <div class="four wide column right aligned">
+                <h4>{{ item.title }}</h4>
+              </div>
+
+              <!--项目介绍-->
+              <div class="sixteen wide column left aligned">
+                <h5><i class="tag green icon"></i>项目简介: {{ item.brief }}</h5>
+              </div>
+
+              <!--技术栈-->
+              <div class="sixteen wide column left aligned">
+                <h5><i class="tag green icon"></i>技术栈: {{ item.tech_architecture }}</h5>
+              </div>
+
+              <!--成果-->
+              <div class="sixteen wide column left aligned" v-for="v in item.contribution">
+                <h5><i class="tag green icon"></i> {{ v.item }}</h5>
+                <!--具体成果-->
+                <div class="sixteen wide column left aligned" v-for="vv in v.desc">
+                  <div class="cv-fix-content-item"><i class="pointing right red icon"></i> {{ vv }}</div>
+                </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--其他-->
+      <div class="ui vertical green segment">
+        <h3 class="ui blue header left aligned">
+          <i class="dashboard icon green"></i>其他
+        </h3>
+
+        <div class="ui grid">
+          <div class="four column row cv-fix-height" v-for="item in cv.etc">
+            <div class="sixteen wide column left aligned">
+              <h5><i class="tag green icon"></i>{{item.title }}</h5>
+            </div>
+
+            <!--成果-->
+            <div class="sixteen wide column left aligned" v-for="v in item.desc">
+              <h5 class="cv-fix-content-item" ><i class="pointing right red icon" ></i> {{ v }}</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
     </div>
-
-
-    <h3>项目</h3>
-    <!--项目-->
-    <section class="resume-project">
-      <h4>个人项目</h4>
-      <div v-for="item in cv.project.personal">
-        <span><a href="#">{{item.name}}</a></span>
-        <span>{{item.duration}}</span>
-        <li>{{item.brief}}</li>
-        <li>{{item.tech_architecture}}</li>
-
-        <div>
-          <li v-for="i in item.contribution">
-            {{ i.item}} : {{i.desc}}
-          </li>
-        </div>
-        <br>
-
-      </div>
-
-      <h4>企业项目</h4>
-      <div v-for="item in cv.project.working">
-        <span><a href="#">{{item.name}}</a></span>
-        <span>{{item.duration}}</span>
-        <li>{{item.brief}}</li>
-        <li>{{item.tech_architecture}}</li>
-
-        <div>
-          <li v-for="i in item.contribution">
-            {{ i.item}} : {{i.desc}}
-          </li>
-        </div>
-        <br>
-
-      </div>
-    </section>
-
-    <h3>其他</h3>
-    <!--其他-->
-    <section class="resume-etc">
-      <div v-for="item in cv.etc">
-        <li>{{item.title }}  : {{ item.desc }} </li>
-      </div>
-    </section>
-
-
-    <!--
-图标样式列表:
-
-http://www.semantic-ui.cn/elements/icon.html
-
-
-
--->
-
-    <div>
-      <br>
-
-      <!--<icon name="beer"></icon>-->
-      <!--<icon name="github"></icon>-->
-      <!--<icon name="qq"></icon>-->
-      <!--<icon name="facebook"></icon>-->
-      <!--<icon name="microphone"></icon>-->
-      <!--<br>-->
-
-      <!--<icon name="headphones"></icon>-->
-      <!--<icon name="address-book-o"></icon>-->
-      <!--<icon name="address-book"></icon>-->
-      <!--<icon name="address-card"></icon>-->
-      <!--<br>-->
-
-      <!--<icon name="mobile"></icon>-->
-      <!--<icon name="mobile-phone"></icon>-->
-      <!--<icon name="google"></icon>-->
-      <!--<icon name="zhihu"></icon>-->
-      <!--<br>-->
-
-      <i class="alarm mute icon red"></i>
-      <i class="text telephone icon read"></i>
-      <i class="mail icon green"></i>
-      <i class="call icon green"></i>
-      <i class="star icon green"></i>
-      <i class="heart icon green"></i>
-      <br>
-
-      <i class="minus icon green"></i>
-      <i class="plus icon red"></i>
-      <i class="radio icon red"></i>
-      <i class="selected radio icon red"></i>
-      <i class="angle right icon red"></i>
-      <br>
-
-      <i class="circle icon green"></i>
-      <i class="xxx icon red"></i>
-      <i class="xxx icon green"></i>
-      <i class="xxx icon red"></i>
-      <i class="xxx icon green"></i>
-      <i class="xxx icon red"></i>
-
-    </div>
-
-
   </div>
-
 
 </template>
 
@@ -177,7 +276,7 @@ http://www.semantic-ui.cn/elements/icon.html
 
 
 <script>
-  import * as cv from '../assets/cv.json'
+  import * as cv from '../assets/cv.json'    // cv-2017.json
   //
 
   export default {
