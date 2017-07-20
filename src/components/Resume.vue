@@ -33,7 +33,7 @@
             <div class="column left aligned">
               <h4>
                 <i class="call icon green"></i>
-                <a class="header" href="#">{{cv.profile.mobile}}</a>
+                {{cv.profile.mobile}}
               </h4>
             </div>
             <div class="column left aligned">
@@ -44,16 +44,15 @@
             </div>
             <div class="column left aligned">
               <h4>
-                <i class="male icon green"></i><a class="header" href="#">{{ cv.profile.birthday }}</a>
-                <i class="marker icon green"></i><a class="header" href="#">{{ cv.profile.address }}</a>
-
+                <i class="male icon green"></i>{{ cv.profile.birthday }}
+                <i class="marker icon green"></i>{{ cv.profile.address }}
               </h4>
             </div>
             <div class="column left aligned">
               <h4>
                 <i class="configure icon green"></i>
                 <!--岗位/薪资-->
-                <a class="header" href="#">目标岗位:{{cv.profile.expect.position }}</a>
+                目标岗位:{{ cv.profile.expect.position }}
               </h4>
             </div>
 
@@ -64,25 +63,33 @@
             <div class="column left aligned">
               <h4>
                 <i class="world icon green"></i>
-                <a class="header" href="#">{{cv.profile.website.blog}}</a>
+                <a target="_blank" v-bind:href="'http://' + cv.profile.website.blog">
+                  {{ cv.profile.website.blog }}
+                </a>
               </h4>
             </div>
             <div class="column left aligned">
               <h4>
                 <i class="github alternate icon green"></i>
-                <a class="header" href="#">{{cv.profile.website.github}}</a>
+                <a target="_blank" v-bind:href="'https://'+ cv.profile.website.github">
+                  {{ cv.profile.website.github }}
+                </a>
               </h4>
             </div>
             <div class="column left aligned">
               <h4>
                 <i class="rocket icon green"></i>
-                <a class="header" href="#">{{cv.profile.website.zhihu}}</a>
+                <a target="_blank" v-bind:href="'https://'+ cv.profile.website.zhihu">
+                  {{ cv.profile.website.zhihu }}
+                </a>
               </h4>
             </div>
             <div class="column left aligned">
               <h4>
                 <i class="book icon green"></i>
-                <a class="header" href="#">{{cv.profile.website.douban}}</a>
+                <a target="_blank" v-bind:href="'https://'+ cv.profile.website.douban">
+                  {{ cv.profile.website.douban }}
+                </a>
               </h4>
             </div>
 
@@ -125,8 +132,12 @@
               <h4>{{ item.title }}</h4>
             </div>
             <!--公司名称-->
-            <div class="four wide column right aligned">
-              <h4>{{ item.company }}</h4>
+            <div class="four wide column left aligned">
+              <h4>
+                <i class="space shuttle icon green"></i>
+                <a target="_blank" v-bind:href="item.url">{{ item.company }}</a>
+                | <a target="_blank" v-bind:href="item.url">{{ item.corp_status }}</a>
+              </h4>
             </div>
             <!--公司所在地-->
             <div class="four wide column right aligned">
@@ -135,7 +146,7 @@
 
             <!--岗位职责-->
             <div class="sixteen wide column left aligned" v-for="v in item.info">
-              <h5><i class="tag green icon"></i> {{ v }}</h5>
+              <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v }}</h5>
             </div>
 
           </div>
@@ -175,26 +186,27 @@
                 <h4>{{ item.company }}</h4>
               </div>
 
+              <!-------------------------------------- 项目细节部分 ---------------------------------------->
               <!--项目介绍-->
               <div class="sixteen wide column left aligned">
-                <h5><i class="tag green icon"></i>项目简介: {{ item.brief }}</h5>
+                <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>项目简介: {{ item.brief }}</h5>
               </div>
 
               <!--技术栈-->
               <div class="sixteen wide column left aligned">
-                <h5><i class="tag green icon"></i>技术栈: {{ item.tech_architecture }}</h5>
+                <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>技术栈: {{ item.tech_architecture }}</h5>
               </div>
 
               <!--成果-->
               <div class="sixteen wide column left aligned" v-for="v in item.contribution">
-                <h5><i class="tag green icon"></i> {{ v.item }}</h5>
+                <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v.item }}</h5>
                 <!--具体成果-->
                 <div class="sixteen wide column left aligned" v-for="vv in v.desc">
-                  <div class="cv-fix-content-item"><i class="pointing right red icon"></i> {{ vv }}</div>
+                  <div class="cv-fix-content-tab8"><i class="pointing right red icon"></i>{{ vv }}</div>
                 </div>
-
               </div>
 
+              <!-------------------------------------- 项目细节部分 ---------------------------------------->
 
             </div>
           </div>
@@ -239,10 +251,10 @@
 
               <!--成果-->
               <div class="sixteen wide column left aligned" v-for="v in item.contribution">
-                <h5><i class="tag green icon"></i> {{ v.item }}</h5>
+                <h5><i class="tag green icon"></i>{{ v.item }}</h5>
                 <!--具体成果-->
                 <div class="sixteen wide column left aligned" v-for="vv in v.desc">
-                  <div class="cv-fix-content-item"><i class="pointing right red icon"></i> {{ vv }}</div>
+                  <div class="cv-fix-content-tab8"><i class="pointing right red icon"></i>{{ vv }}</div>
                 </div>
 
               </div>
@@ -269,7 +281,7 @@
 
             <!--成果-->
             <div class="sixteen wide column left aligned" v-for="v in item.desc">
-              <h5 class="cv-fix-content-item"><i class="pointing right red icon"></i> {{ v }}</h5>
+              <h5 class="cv-fix-content-tab8"><i class="pointing right red icon"></i>{{ v }}</h5>
             </div>
           </div>
         </div>
@@ -289,6 +301,7 @@
 
 <script>
   import * as cv from '../assets/cv.json'    // cv-2017.json
+  // import * as cv from '../assets/cv-2017.json'    // cv-2017.json
 
   export default {
     name: 'resume',
