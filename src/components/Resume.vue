@@ -122,25 +122,29 @@
         <!--工作信息-->
         <div class="ui grid">
 
-          <div class="four column row cv-fix-height" v-for="item in cv.work">
+          <div class="three column row cv-fix-height" v-for="item in cv.work">
             <!--履职时间-->
-            <div class="four wide column left aligned">
+            <div class="three wide column left aligned">
               <h4>{{ item.duration }}</h4>
             </div>
             <!--岗位-->
-            <div class="four wide column left aligned">
+            <div class="three wide column left aligned">
               <h4>{{ item.title }}</h4>
             </div>
             <!--公司名称-->
-            <div class="four wide column left aligned">
+            <div class="six wide column left aligned">
               <h4>
                 <i class="space shuttle icon green"></i>
                 <a target="_blank" v-bind:href="item.url">{{ item.company }}</a>
                 | <a target="_blank" v-bind:href="item.url">{{ item.corp_status }}</a>
               </h4>
             </div>
+            <!--公司所属行业-->
+            <div class=" two wide column left aligned">
+              <h4>{{ item.corp_type }}</h4>
+            </div>
             <!--公司所在地-->
-            <div class="four wide column right aligned">
+            <div class="two wide column right aligned">
               <h4>{{ item.location }}</h4>
             </div>
 
@@ -153,121 +157,115 @@
         </div>
       </div>
 
-      <!--项目-->
+      <!--企业项目-->
       <div class="ui vertical green segment">
         <h3 class="ui blue header left aligned">
-          <i class="cubes icon green"></i>项目
+          <i class="cubes icon green"></i>企业项目
         </h3>
 
-        <!--企业项目-->
-        <div class="ui orange segment">
-          <h4 class="ui orange header left aligned">
-            企业项目
-          </h4>
+        <div class="ui grid">
 
-          <div class="ui grid">
-
-            <div class="four column row cv-fix-height" v-for="item in cv.project.working">
-              <!--项目名称-->
-              <div class="four wide column left aligned">
-                <h4><i class="cube icon green"></i>{{ item.name }}</h4>
-              </div>
-              <!--项目开发时间-->
-              <div class="four wide column left aligned">
-                <h4>{{ item.duration }}</h4>
-              </div>
-
-              <!--职责-->
-              <div class="four wide column right aligned">
-                <h4>{{ item.title }}</h4>
-              </div>
-              <!--公司-->
-              <div class="four wide column right aligned">
-                <h4>{{ item.company }}</h4>
-              </div>
-
-              <!-------------------------------------- 项目细节部分 ---------------------------------------->
-              <!--项目介绍-->
-              <div class="sixteen wide column left aligned">
-                <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>项目简介: {{ item.brief }}</h5>
-              </div>
-
-              <!--技术栈-->
-              <div class="sixteen wide column left aligned">
-                <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>技术栈: {{ item.tech_architecture }}</h5>
-              </div>
-
-              <!--成果-->
-              <div class="sixteen wide column left aligned" v-for="v in item.contribution">
-                <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v.item }}</h5>
-                <!--具体成果-->
-                <div class="sixteen wide column left aligned" v-for="vv in v.desc">
-                  <div class="cv-fix-content-tab8"><i class="pointing right red icon"></i>{{ vv }}</div>
-                </div>
-              </div>
-
-              <!-------------------------------------- 项目细节部分 ---------------------------------------->
-
+          <div class="four column row cv-fix-height" v-for="item in cv.project.working">
+            <!--项目名称-->
+            <div class="four wide column left aligned">
+              <h4><i class="cube icon green"></i><a target="_blank" v-bind:href="item.url">{{ item.name }}</a></h4>
             </div>
-          </div>
-
-        </div>
-
-        <!--个人项目-->
-        <div class="ui orange segment">
-          <h4 class="ui orange header left aligned">个人项目</h4>
-
-          <div class="ui grid">
-
-            <div class="four column row cv-fix-height" v-for="item in cv.project.personal">
-              <!--项目名称-->
-              <div class="four wide column left aligned">
-                <h4><i class="cube icon green"></i>{{ item.name }}</h4>
-              </div>
-              <!--项目开发时间-->
-              <div class="four wide column left aligned">
-                <h4>{{ item.duration }}</h4>
-              </div>
-
-              <!--项目地址-->
-              <div class="four wide column right aligned">
-                <h4>{{ item.url }}</h4>
-              </div>
-
-              <!--职责-->
-              <div class="four wide column right aligned">
-                <h4>{{ item.title }}</h4>
-              </div>
-
-              <!--项目介绍-->
-              <div class="sixteen wide column left aligned">
-                <h5><i class="tag green icon"></i>项目简介: {{ item.brief }}</h5>
-              </div>
-
-              <!--技术栈-->
-              <div class="sixteen wide column left aligned">
-                <h5><i class="tag green icon"></i>技术栈: {{ item.tech_architecture }}</h5>
-              </div>
-
-              <!--成果-->
-              <div class="sixteen wide column left aligned" v-for="v in item.contribution">
-                <h5><i class="tag green icon"></i>{{ v.item }}</h5>
-                <!--具体成果-->
-                <div class="sixteen wide column left aligned" v-for="vv in v.desc">
-                  <div class="cv-fix-content-tab8"><i class="pointing right red icon"></i>{{ vv }}</div>
-                </div>
-
-              </div>
-
-
+            <!--项目开发时间-->
+            <div class="three wide column left aligned">
+              <h4>{{ item.duration }}</h4>
             </div>
-          </div>
 
+            <!--职责-->
+            <div class="three wide column right aligned">
+              <h4>{{ item.title }}</h4>
+            </div>
+            <!--公司-->
+            <div class="six wide column right aligned">
+              <h4>{{ item.company }}</h4>
+            </div>
+
+            <!-------------------------------------- 项目细节部分 ---------------------------------------->
+            <!--项目介绍-->
+            <div class="sixteen wide column left aligned">
+              <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>项目简介: {{ item.brief }}</h5>
+            </div>
+
+            <!--技术栈-->
+            <div class="sixteen wide column left aligned">
+              <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>技术栈: {{ item.tech_architecture }}</h5>
+            </div>
+
+            <!--成果-->
+            <div class="sixteen wide column left aligned" v-for="v in item.contribution">
+              <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v.item }}</h5>
+              <!--具体成果-->
+              <div class="sixteen wide column left aligned" v-for="vv in v.desc">
+                <div class="cv-fix-content-tab8"><i class="pointing right red icon"></i>{{ vv }}</div>
+              </div>
+            </div>
+
+            <!-------------------------------------- 项目细节部分 ---------------------------------------->
+
+          </div>
         </div>
 
       </div>
 
-      <!--其他-->
+      <!--个人项目-->
+      <div class="ui vertical green segment">
+        <h3 class="ui blue header left aligned">
+          <i class="cubes icon green"></i>个人项目
+        </h3>
+
+        <div class="ui grid">
+
+          <div class="four column row cv-fix-height" v-for="item in cv.project.personal">
+            <!--项目名称-->
+            <div class="four wide column left aligned">
+              <h4><i class="cube icon green"></i>{{ item.name }}</h4>
+            </div>
+            <!--项目开发时间-->
+            <div class="four wide column left aligned">
+              <h4>{{ item.duration }}</h4>
+            </div>
+
+            <!--项目地址-->
+            <div class="four wide column right aligned">
+              <h4>{{ item.url }}</h4>
+            </div>
+
+            <!--职责-->
+            <div class="four wide column right aligned">
+              <h4>{{ item.title }}</h4>
+            </div>
+
+            <!--项目介绍-->
+            <div class="sixteen wide column left aligned">
+              <h5><i class="tag green icon"></i>项目简介: {{ item.brief }}</h5>
+            </div>
+
+            <!--技术栈-->
+            <div class="sixteen wide column left aligned">
+              <h5><i class="tag green icon"></i>技术栈: {{ item.tech_architecture }}</h5>
+            </div>
+
+            <!--成果-->
+            <div class="sixteen wide column left aligned" v-for="v in item.contribution">
+              <h5><i class="tag green icon"></i>{{ v.item }}</h5>
+              <!--具体成果-->
+              <div class="sixteen wide column left aligned" v-for="vv in v.desc">
+                <div class="cv-fix-content-tab8"><i class="pointing right red icon"></i>{{ vv }}</div>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+        <!--其他-->
       <div class="ui vertical green segment">
         <h3 class="ui blue header left aligned">
           <i class="dashboard icon green"></i>其他
@@ -300,8 +298,8 @@
 
 
 <script>
-  import * as cv from '../assets/cv.json'    // cv-2017.json
-  // import * as cv from '../assets/cv-2017.json'    // cv-2017.json
+  // import * as cv from '../assets/cv.json'    // cv-2017.json
+  import * as cv from '../assets/cv-2017.json'    // cv-2017.json
 
   export default {
     name: 'resume',
