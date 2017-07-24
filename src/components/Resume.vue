@@ -196,11 +196,11 @@
             </div>
 
             <!--成果-->
-            <div class="sixteen wide column left aligned" v-for="v in item.contribution">
+            <div class="sixteen wide column left aligned" v-for="v in item.content">
               <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v.item }}</h5>
               <!--具体成果-->
               <div class="sixteen wide column left aligned" v-for="vv in v.desc">
-                <div class="cv-fix-content-tab8"><i class="pointing right red icon"></i>{{ vv }}</div>
+                <div class="cv-fix-content-tab8"><h5><i class="pointing right red icon"></i>{{ vv }}</h5></div>
               </div>
             </div>
 
@@ -221,42 +221,23 @@
 
           <div class="four column row cv-fix-height" v-for="item in cv.project.personal">
             <!--项目名称-->
-            <div class="four wide column left aligned">
-              <h4><i class="cube icon green"></i>{{ item.name }}</h4>
+            <div class="three wide column left aligned">
+              <h4><i class="cube icon green"></i><a target="_blank" v-bind:href="'https://'+item.url">{{ item.name }}</a></h4>
             </div>
-            <!--项目开发时间-->
-            <div class="four wide column left aligned">
-              <h4>{{ item.duration }}</h4>
+
+            <!--项目语言技术类型-->
+            <div class="one wide column left aligned">
+              <h4>{{ item.tech_main_type }}</h4>
             </div>
 
             <!--项目地址-->
-            <div class="four wide column right aligned">
-              <h4>{{ item.url }}</h4>
+            <div class="six wide column left aligned">
+              <h4><i class="github icon green"></i><a target="_blank" v-bind:href="'https://'+item.url">{{ item.url }}</a></h4>
             </div>
 
-            <!--职责-->
-            <div class="four wide column right aligned">
-              <h4>{{ item.title }}</h4>
-            </div>
-
-            <!--项目介绍-->
-            <div class="sixteen wide column left aligned">
-              <h5><i class="tag green icon"></i>项目简介: {{ item.brief }}</h5>
-            </div>
-
-            <!--技术栈-->
-            <div class="sixteen wide column left aligned">
-              <h5><i class="tag green icon"></i>技术栈: {{ item.tech_architecture }}</h5>
-            </div>
-
-            <!--成果-->
-            <div class="sixteen wide column left aligned" v-for="v in item.contribution">
-              <h5><i class="tag green icon"></i>{{ v.item }}</h5>
-              <!--具体成果-->
-              <div class="sixteen wide column left aligned" v-for="vv in v.desc">
-                <div class="cv-fix-content-tab8"><i class="pointing right red icon"></i>{{ vv }}</div>
-              </div>
-
+            <!--项目简介-->
+            <div class="six wide column left aligned">
+              <h4>{{ item.brief }}</h4>
             </div>
 
 
@@ -274,7 +255,7 @@
         <div class="ui grid">
           <div class="four column row cv-fix-height" v-for="item in cv.etc">
             <div class="sixteen wide column left aligned">
-              <h5><i class="tag green icon"></i>{{item.title }}</h5>
+              <h4><i class="tag green icon"></i>{{item.title }}</h4>
             </div>
 
             <!--成果-->
