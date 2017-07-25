@@ -280,7 +280,7 @@
 
 <script>
   // import * as cv from '../assets/cv.json'    // cv-2017.json
-  import * as cv from '../assets/cv-2017.json'    // cv-2017.json
+  import * as cv from '../assets/cv.json'    // cv-2017.json
 
   export default {
     name: 'resume',
