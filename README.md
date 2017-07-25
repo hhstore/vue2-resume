@@ -7,9 +7,9 @@
 - 打印: 调用浏览器自带打印功能
 - 导出 PDF: chrome 的打印, 可导出 PDF.
 
-## 简历打印预览:
+## 简历打印预览图:
 
-- ![cv](./doc/cv.png)
+![cv](./doc/cv.png)
 
 ## Build Setup
 
