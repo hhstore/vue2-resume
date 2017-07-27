@@ -150,7 +150,7 @@
 
             <!--岗位职责-->
             <div class="sixteen wide column left aligned" v-for="v in item.info">
-              <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v }}</h5>
+              <h4 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v }}</h4>
             </div>
 
           </div>
@@ -187,20 +187,22 @@
             <!-------------------------------------- 项目细节部分 ---------------------------------------->
             <!--项目介绍-->
             <div class="sixteen wide column left aligned">
-              <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>项目简介: {{ item.brief }}</h5>
+              <h4 class="cv-fix-content-tab4"><i class="tag green icon"></i>简介: {{ item.brief }}</h4>
             </div>
 
             <!--技术栈-->
             <div class="sixteen wide column left aligned">
-              <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>技术栈: {{ item.tech_architecture }}</h5>
+              <h4 class="cv-fix-content-tab4">
+                <i class="tag green icon"></i>技术栈: <u>{{ item.tech_architecture }}</u>
+              </h4>
             </div>
 
             <!--成果-->
             <div class="sixteen wide column left aligned" v-for="v in item.content">
-              <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v.item }}</h5>
+              <h4 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v.item }}</h4>
               <!--具体成果-->
               <div class="sixteen wide column left aligned" v-for="vv in v.desc">
-                <div class="cv-fix-content-tab8"><h5><i class="pointing right red icon"></i>{{ vv }}</h5></div>
+                <div class="cv-fix-content-tab8"><h4><i class="pointing right red icon"></i>{{ vv }}</h4></div>
               </div>
             </div>
 
@@ -246,7 +248,7 @@
 
       </div>
 
-        <!--其他-->
+      <!--其他-->
       <div class="ui vertical green segment">
         <h3 class="ui blue header left aligned">
           <i class="dashboard icon green"></i>其他
