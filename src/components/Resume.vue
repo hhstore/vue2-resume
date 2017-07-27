@@ -184,6 +184,9 @@
               <h4>{{ item.company }}</h4>
             </div>
 
+            <!--分割线-->
+            <hr size="1" color="black" width="1060">
+
             <!-------------------------------------- 项目细节部分 ---------------------------------------->
             <!--项目介绍-->
             <div class="sixteen wide column left aligned">
