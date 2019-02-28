@@ -4,7 +4,6 @@ import Router from 'vue-router'
 // ******************************************
 //             组件列表:
 // ******************************************
-import Hello from '@/components/Hello'
 import Resume from '@/components/Resume'
 
 //
@@ -19,11 +18,6 @@ Vue.use(Router)
 // ******************************************
 export default new Router({
   routes: [
-    {
-      path: '/hello',
-      name: 'Hello',
-      component: Hello
-    },
     {
       path: '/',
       name: 'Resume',   // 简历组件
