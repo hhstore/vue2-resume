@@ -221,7 +221,7 @@
       <!--创业项目-->
       <div class="ui vertical green segment">
         <h3 class="ui blue header left aligned">
-          <i class="cubes icon green"></i>创业项目
+          <i class="cubes icon green"></i>兼职项目
         </h3>
 
         <div class="ui grid">
@@ -287,17 +287,12 @@
 
         <div class="ui grid">
 
-          <div class="four column row cv-fix-height" v-for="item in cv.project.personal">
+          <div class="four column row cv-fix-height cv-fix-content-height" v-for="item in cv.project.personal">
             <!--项目名称-->
-            <div class="three wide column left aligned">
-              <h4><i class="cube icon green"></i><a target="_blank" v-bind:href="'https://'+item.url">{{ item.name
+            <!-- <div class="three wide column left aligned">
+              <h4 class="cv-fix-content-height"><i class="cube icon green"></i><a target="_blank" v-bind:href="'https://'+item.url">{{ item.name
                 }}</a></h4>
-            </div>
-
-            <!--项目语言技术类型-->
-            <div class="one wide column left aligned">
-              <h4>{{ item.tech_main_type }}</h4>
-            </div>
+            </div> -->
 
             <!--项目地址-->
             <div class="six wide column left aligned">
@@ -305,6 +300,10 @@
                 }}</a></h4>
             </div>
 
+            <!--项目语言技术类型-->
+            <div class="one wide column left aligned">
+              <h4>{{ item.tech_main_type }}</h4>
+            </div>
             <!--项目简介-->
             <div class="six wide column left aligned">
               <h4>{{ item.brief }}</h4>
@@ -325,7 +324,7 @@
         <div class="ui grid">
           <div class="four column row cv-fix-height" v-for="item in cv.etc">
             <div class="sixteen wide column left aligned">
-              <h4><i class="tag green icon"></i>{{item.title }}</h4>
+              <h4><i class="tag green icon"></i>{{item.title }}:</h4>
             </div>
 
             <!--成果-->
