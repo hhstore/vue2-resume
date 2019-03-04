@@ -1,54 +1,42 @@
 # vue2-resume
 
-- 基于 vue2.js 和 semantic-ui 实现的 `简历` 生成工具.
-- 简历修改:
-  - 修改数据源: `/vue2-resume/src/assets/cv.json`
-- 运行: `npm run dev`
-- 打印: 调用浏览器自带打印功能
-- 导出 PDF: chrome 的打印, 可导出 PDF.
+## 说明:
 
-## 简历打印预览图:
+- 基于 `vue2.js` 和 `semantic-ui` 实现的 本地 `简历` 生成工具.
+- 支持`导出PDF`(利用浏览器的导出功能)
+- 支持`打印`
+
+## 使用方法:
+
+### 1. 安装+启动:
+
+- 安装:
+
+```bash
+
+# 下载本项目:
+git clone git@github.com:hhstore/vue2-resume.git
+
+# 切换到项目目录:
+cd vue2-resume
+
+# 安装依赖包:
+make install
+
+# 启动:
+make run
+
+```
+
+- 浏览器查看简历: `http://localhost:8080/#/`
+
+### 2. 自主修改简历模板:
+
+- 简历内容配置文件: `./src/assets/cv.json`
+- 项目启动后, 简历页面会随配置文件修改而自动刷新
+
+
+### 3. 简历打印预览效果:
 
 ![cv](./doc/cv.png)
 
-## Build Setup
-
-``` bash
-######################################################
-#
-# install dependencies
-# 安装依赖:
-#
-npm install
-
-######################################################
-# 开发环境运行:
-# serve with hot reload at localhost:8080
-#
-npm run dev
-
-######################################################
-#
-# 生产环境运行:
-#   - 此为编译结果, 需结合 HTTP 服务器才可访问
-#
-# build for production with minification
-npm run build
-
-######################################################
-# build for production and view the bundle analyzer report
-#
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
