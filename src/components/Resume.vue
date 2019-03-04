@@ -125,7 +125,7 @@
 
     <!--工作经历-->
     <table class="ui table green cv-tb-job">
-      <thead><tr></tr></thead>
+      <thead><tr><td></td></tr></thead>
       <!--单独的标题项-->
       <tbody>
       <tr>
@@ -212,15 +212,15 @@
 
     <!--业余兼职项目列表-->
     <table class="ui table green cv-tb-job">
-      <thead>
+      <thead><tr><td></td></tr></thead>
+      <!--单独的标题项-->
+      <tbody>
       <tr>
-        <td>
-          <h3 class="ui blue header left aligned">
-            <i class="cubes icon green"></i>兼职项目
-          </h3>
-        </td>
+        <h3 class="ui blue header">
+          <i class="cubes icon green"></i>兼职项目
+        </h3>
       </tr>
-      </thead>
+      </tbody>
 
       <tbody v-for="item in cv.project.part_time">
       <tr>
@@ -260,15 +260,15 @@
 
     <!--开源项目列表-->
     <table  class="ui table green cv-tb-job">
-      <thead>
+      <thead><tr><td></td></tr></thead>
+      <!--单独的标题项-->
+      <tbody>
       <tr>
-        <td>
-          <h3 class="ui blue header left aligned">
-            <i class="cubes icon green"></i>个人项目
-          </h3>
-        </td>
+        <h3 class="ui blue header">
+          <i class="cubes icon green"></i>个人项目
+        </h3>
       </tr>
-      </thead>
+      </tbody>
 
       <tbody>
         <tr v-for="item in cv.project.personal">
@@ -289,15 +289,15 @@
 
     <!--其他说明-->
     <table  class="ui table green cv-tb-job">
-      <thead>
+      <thead><tr><td></td></tr></thead>
+      <!--单独的标题项-->
+      <tbody>
       <tr>
-        <td>
-          <h3 class="ui blue header left aligned">
-            <i class="dashboard icon green"></i>其他
-          </h3>
-        </td>
+        <h3 class="ui blue header">
+          <i class="dashboard icon green"></i>其他
+        </h3>
       </tr>
-      </thead>
+      </tbody>
 
       <tbody>
         <tr v-for="item in cv.etc">
