@@ -34,6 +34,11 @@ e2e.tests:
 all.tests:
 	cnpm test
 
+# 项目提交
+git.push:
+	git stash
+	git fetch && git rebase && git push
+	git stash pop
 
 #
 # 文档:
