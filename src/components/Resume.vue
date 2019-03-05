@@ -15,7 +15,7 @@
     <!--姓名-->
     <div class="ui grid left aligned">
       <div class="twelve wide column">
-        <h1 class="ui green header"> {{cv.profile.name}} </h1>
+        <h1 class="ui teal header"> {{cv.profile.name}} </h1>
       </div>
       <div class="four wide column right aligned">
         <h3>期望薪资: {{cv.profile.expect.salary}}</h3>
@@ -23,12 +23,12 @@
     </div>
 
     <!--联系方式-->
-    <table class="ui table green cv-table">
+    <table class="ui table teal cv-table">
       <thead><tr></tr></thead>
 
       <!--<tbody>-->
         <!--<tr>-->
-          <!--<td colspan="3"><h1 class="ui green header"> {{cv.profile.name}} </h1></td>-->
+          <!--<td colspan="3"><h1 class="ui teal header"> {{cv.profile.name}} </h1></td>-->
           <!--<td class="right aligned"><h3>期望薪资: {{cv.profile.expect.salary}}</h3></td>-->
         <!--</tr>-->
       <!--</tbody>-->
@@ -37,20 +37,20 @@
       <tr>
         <td>
           <h5>
-            <i class="male icon green"></i>{{ cv.profile.birthday }}
-            <i class="marker icon green"></i>{{ cv.profile.address }}
+            <i class="male icon teal"></i>{{ cv.profile.birthday }}
+            <i class="marker icon teal"></i>{{ cv.profile.address }}
           </h5>
         </td>
         <td>
           <h5>
-            <i class="configure icon green"></i>
+            <i class="configure icon teal"></i>
             <!--岗位/薪资-->
             岗位:{{ cv.profile.expect.position }}
           </h5>
         </td>
         <td>
           <h5>
-            <i class="github alternate icon green"></i>
+            <i class="github alternate icon teal"></i>
             <a target="_blank" v-bind:href="'https://'+ cv.profile.website.github">
               {{ cv.profile.website.github }}
             </a>
@@ -58,7 +58,7 @@
         </td>
         <td>
           <h5>
-            <i class="world icon green"></i>
+            <i class="github icon teal"></i>
             <a target="_blank" v-bind:href="'http://' + cv.profile.website.blog">
               {{ cv.profile.website.blog }}
             </a>
@@ -70,19 +70,19 @@
       <tr>
         <td>
           <h4>
-            <i class="call icon green"></i>
+            <i class="call icon teal"></i>
             {{cv.profile.mobile}}
           </h4>
         </td>
         <td>
           <h4>
-            <i class="mail icon green"></i>
+            <i class="mail icon teal"></i>
             <a class="header" href="#">{{cv.profile.email}}</a>
           </h4>
         </td>
         <td>
           <h4>
-            <i class="rocket icon green"></i>
+            <i class="weibo icon teal"></i>
             <a target="_blank" v-bind:href="'https://'+ cv.profile.website.zhihu">
               {{ cv.profile.website.zhihu }}
             </a>
@@ -90,7 +90,7 @@
         </td>
         <td>
           <h4>
-            <i class="book icon green"></i>
+            <i class="wechat icon teal"></i>
             <a target="_blank" v-bind:href="'https://'+ cv.profile.website.douban">
               {{ cv.profile.website.douban }}
             </a>
@@ -102,13 +102,13 @@
     </table>
 
     <!--学历信息-->
-    <table class="ui table green cv-table ">
+    <table class="ui table teal cv-table ">
       <thead><tr></tr></thead>
       <tbody>
       <tr>
         <td>
           <h3 class="ui blue header left aligned ">
-            <i class="student icon green"></i>学历
+            <i class="small student icon teal"></i>学历
           </h3>
         </td>
       </tr>
@@ -124,13 +124,13 @@
     </table>
 
     <!--工作经历-->
-    <table class="ui table green cv-tb-job">
+    <table class="ui table teal cv-tb-job">
       <thead><tr><td></td></tr></thead>
       <!--单独的标题项-->
       <tbody>
       <tr>
         <h3 class="ui blue header">
-          <i class="sitemap icon green"></i>工作经历
+          <i class="small windows icon teal"></i>工作经历
         </h3>
       </tr>
       </tbody>
@@ -140,7 +140,7 @@
         <td><h4>{{ item.duration }}</h4></td>
         <td>
           <h4>
-            <i class="space shuttle icon green"></i>
+            <i class="internet explorer icon teal"></i>
             <a target="_blank" v-bind:href="item.url">{{ item.company }}</a>
             | <a target="_blank" v-bind:href="item.url">{{ item.corp_status }}</a>
           </h4>
@@ -151,9 +151,9 @@
       </tr>
       <tr>
         <td colspan="5">
-          <!--工作主要职责-->
+          <!--工作主要职责  purple-->
           <div v-for="t in item.info">
-            <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ t }}</h5>
+            <h5 class="cv-fix-content-tab4"><i class="chevron circle right purple icon"></i>{{ t }}</h5>
           </div>
         </td>
       </tr>
@@ -161,7 +161,7 @@
     </table>
 
     <!--企业开发项目列表-->
-    <table class="ui table green cv-tb-job">
+    <table class="ui table teal cv-tb-job">
       <thead>
         <tr><td></td></tr>
       </thead>
@@ -169,7 +169,7 @@
       <tbody>
         <tr>
           <h3 class="ui blue header">
-            <i class="cubes icon green"></i>企业项目
+            <i class="small cubes icon teal"></i>企业项目
           </h3>
         </tr>
       </tbody>
@@ -177,7 +177,7 @@
       <tbody v-for="item in cv.project.working">
         <tr>
           <!--项目名称-->
-          <td><h4><i class="cube icon green"></i><a target="_blank" v-bind:href="item.url">{{ item.name }}</a></h4></td>
+          <td><h4><i class="cube icon teal"></i><a target="_blank" v-bind:href="item.url">{{ item.name }}</a></h4></td>
           <!--项目周期-->
           <td><h4>{{ item.duration }}</h4></td>
           <!--担任职位-->
@@ -190,15 +190,15 @@
         <tr>
           <td colspan="4">
             <!--简介-->
-            <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>简介: {{ item.brief }}</h5>
+            <h5 class="cv-fix-content-tab4"><i class="bell teal icon"></i>简介: {{ item.brief }}</h5>
             <!--项目技术栈-->
-            <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>技术栈: <u>{{ item.tech_architecture }}</u></h5>
+            <h5 class="cv-fix-content-tab4"><i class="bell teal icon"></i>技术栈: <u>{{ item.tech_architecture }}</u></h5>
 
             <!--技术成果-->
             <div v-for="v in item.content">
-              <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v.item }}</h5>
+              <h5 class="cv-fix-content-tab4"><i class="user teal icon"></i>{{ v.item }}</h5>
               <div class="cv-fix-content-tab8" v-for="vv in v.desc">
-                <h5><i class="pointing right red icon"></i>{{ vv }}</h5>
+                <h5><i class="pointing right purple icon"></i>{{ vv }}</h5>
               </div>
             </div>
 
@@ -211,13 +211,13 @@
 
 
     <!--业余兼职项目列表-->
-    <table class="ui table green cv-tb-job">
+    <table class="ui table teal cv-tb-job">
       <thead><tr><td></td></tr></thead>
       <!--单独的标题项-->
       <tbody>
       <tr>
         <h3 class="ui blue header">
-          <i class="cubes icon green"></i>兼职项目
+          <i class="small cubes icon teal"></i>兼职项目
         </h3>
       </tr>
       </tbody>
@@ -225,7 +225,7 @@
       <tbody v-for="item in cv.project.part_time">
       <tr>
         <!--项目名称-->
-        <td><h4><i class="cube icon green"></i><a target="_blank" v-bind:href="item.url">{{ item.name }}</a></h4></td>
+        <td><h4><i class="cube icon teal"></i><a target="_blank" v-bind:href="item.url">{{ item.name }}</a></h4></td>
         <!--项目周期-->
         <td><h4>{{ item.duration }}</h4></td>
         <!--担任职位-->
@@ -238,15 +238,15 @@
       <tr>
         <td colspan="4">
           <!--简介-->
-          <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>简介: {{ item.brief }}</h5>
+          <h5 class="cv-fix-content-tab4"><i class="bell teal icon"></i>简介: {{ item.brief }}</h5>
           <!--项目技术栈-->
-          <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>技术栈: <u>{{ item.tech_architecture }}</u></h5>
+          <h5 class="cv-fix-content-tab4"><i class="bell teal icon"></i>技术栈: <u>{{ item.tech_architecture }}</u></h5>
 
           <!--技术成果-->
           <div v-for="v in item.content">
-            <h5 class="cv-fix-content-tab4"><i class="tag green icon"></i>{{ v.item }}</h5>
+            <h5 class="cv-fix-content-tab4"><i class="user teal icon"></i>{{ v.item }}</h5>
             <div class="cv-fix-content-tab8" v-for="vv in v.desc">
-              <h5><i class="pointing right red icon"></i>{{ vv }}</h5>
+              <h5><i class="pointing right purple icon"></i>{{ vv }}</h5>
             </div>
           </div>
 
@@ -259,13 +259,13 @@
 
 
     <!--开源项目列表-->
-    <table  class="ui table green cv-tb-job">
+    <table  class="ui table teal cv-tb-job">
       <thead><tr><td></td></tr></thead>
       <!--单独的标题项-->
       <tbody>
       <tr>
         <h3 class="ui blue header">
-          <i class="cubes icon green"></i>个人项目
+          <i class="small cubes icon teal"></i>个人项目
         </h3>
       </tr>
       </tbody>
@@ -274,27 +274,27 @@
         <tr v-for="item in cv.project.personal">
           <!--项目访问地址-->
           <td>
-            <h4><i class="github icon green"></i><a target="_blank" v-bind:href="'https://'+item.url">{{ item.url
+            <h4><i class="github icon teal"></i><a target="_blank" v-bind:href="'https://'+item.url">{{ item.url
               }}</a>
             </h4>
           </td>
           <!--项目类型-->
           <td><h4>{{ item.tech_main_type }}</h4></td>
           <!--项目简介-->
-          <td><h4>{{ item.brief }}</h4></td>
+          <td><h4><i class="pointing right purple icon"></i>{{ item.brief }}</h4></td>
         </tr>
       </tbody>
     </table>
 
 
     <!--其他说明-->
-    <table  class="ui table green cv-tb-job">
+    <table  class="ui table teal cv-tb-job">
       <thead><tr><td></td></tr></thead>
       <!--单独的标题项-->
       <tbody>
       <tr>
         <h3 class="ui blue header">
-          <i class="dashboard icon green"></i>其他
+          <i class="small dashboard icon teal"></i>其他
         </h3>
       </tr>
       </tbody>
@@ -303,10 +303,10 @@
         <tr v-for="item in cv.etc">
           <td>
             <!--分类-->
-            <h4><i class="tag green icon"></i>{{item.title }}:</h4>
+            <h4><i class="user teal icon"></i>{{item.title }}:</h4>
             <div v-for="v in item.desc">
               <!--详情-->
-              <h5 class="cv-fix-content-tab8"><i class="pointing right red icon"></i>{{ v }}</h5>
+              <h5 class="cv-fix-content-tab8"><i class="pointing right purple icon"></i>{{ v }}</h5>
             </div>
           </td>
         </tr>
