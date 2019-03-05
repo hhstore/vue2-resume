@@ -1,7 +1,7 @@
 {
   "profile": {
-    "name": "xxxx",
-    "email": "xxxx@gmail.com",
+    "name": "小明",
+    "email": "xiaoming@gmail.com",
     "mobile": "171xxxxx",
     "birthday": "19xx.12",
     "address": "上海•xx",
@@ -20,7 +20,7 @@
   },
   "edu": [
     {
-      "school": "xxxx大学",
+      "school": "THU大学",
       "major": "xxxx专业",
       "duration": "200x.09-201x.06",
       "edu_level": "统招本科",
@@ -38,8 +38,7 @@
       "title": "高级软件工程师",
       "info": [
         "任职xxx, 负责xxxx",
-        "主导xxxx, ",
-        "组织xxx, 参与xxx, 有比较丰富的xxxx经验"
+        "主导xxxx, 组织xxx, 参与xxx, 有比较丰富的xxxx经验"
       ]
     },
     {
@@ -55,7 +54,6 @@
         "负责xxxx开发"
       ]
     }
-
   ],
   "project": {
     "working": [
@@ -72,24 +70,20 @@
             "item": "职责:",
             "desc": [
               "管理: xxxxx",
-              "开发: xxxx开发",
-              "外协: 与xxxxx, 沟通xxxxx, 与供应商xxxxx."
+              "开发: xxxx开发"
             ]
           },
           {
             "item": "成果:",
             "desc": [
               "产品调研: xxxxxxx.",
-              "App 架构设计: xxxxxx.",
-              "团队管理: xxxxxxx."
+              "App 架构设计: xxxxxx."
             ]
           }
         ]
-      },
-
-
-
-
+      }
+    ],
+    "part_time": [
       {
         "name": "xxxxx 系统",
         "company": "xxxx有限公司",
@@ -107,10 +101,6 @@
           }
         ]
       }
-
-
-
-
     ],
     "personal": [
       {
@@ -126,39 +116,17 @@
         "brief": "Python3实现:拉勾网爬虫(登录验证,爬取企业,招聘信息等)"
       },
       {
-        "name": "netease-sms-sdk",
-        "url": "github.com/hhstore/netease-sms-sdk",
-        "tech_main_type": "Python",
-        "brief": "Python3实现:网易云信-短信验证码服务SDK(非官方)"
-      },
-      {
-        "name": "annotated-py-sanic",
-        "url": "github.com/hhstore/annotated-py-sanic",
-        "tech_main_type": "Python",
-        "brief": "sanic (高性能 web框架)源码注解"
-      },
-      {
         "name": "annotated-py-Flask",
         "url": "github.com/hhstore/annotated-py-Flask",
         "tech_main_type": "Python",
         "brief": "Flask (web框架)源码(v0.1, v0.5, v0.10)注解, 架构剖析图"
       },
-
-
-      {
-        "name": "annotated-py-asyncio",
-        "url": "github.com/hhstore/annotated-py-asyncio",
-        "tech_main_type": "Python",
-        "brief": "asyncio (Python3 标准库)源码注解"
-      },
-
       {
         "name": "annotated-go-macaron",
         "url": "github.com/hhstore/annotated-go-macaron",
         "tech_main_type": "Go",
         "brief": "macaron (web 框架)源码注解"
       }
-
     ]
   },
   "honour": [
