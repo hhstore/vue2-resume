@@ -145,9 +145,11 @@
             | <a target="_blank" v-bind:href="item.url">{{ item.corp_status }}</a>
           </h4>
         </td>
+        <!--行业信息-->
         <td><h4>{{ item.corp_type }}</h4></td>
-        <td><h4>{{ item.title }}</h4></td>
-        <td><h4>{{ item.location }}</h4></td>
+        <!--职位信息-->
+        <td><h4><i class="user icon teal"></i>{{ item.title }}</h4></td>
+        <td><h4><i class="map marker icon teal"></i>{{ item.location }}</h4></td>
       </tr>
       <tr>
         <td colspan="5">
@@ -183,7 +185,7 @@
           <!--项目周期-->
           <td class="right aligned"><h4>{{ item.duration }}</h4></td>
           <!--担任职位-->
-          <td class="right aligned"><h4>{{ item.title }}</h4></td>
+          <td class="right aligned"><h4><i class="user icon teal"></i>{{ item.title }}</h4></td>
           <!--所在企业-->
           <td class="right aligned"><h4>{{ item.company }}</h4></td>
         </tr>
@@ -233,7 +235,7 @@
         <!--项目周期-->
         <td><h4>{{ item.duration }}</h4></td>
         <!--担任职位-->
-        <td class="right aligned"><h4>{{ item.title }}</h4></td>
+        <td class="right aligned"><h4><i class="user icon teal"></i>{{ item.title }}</h4></td>
         <!--所在企业-->
         <td class="right aligned"><h4>{{ item.company }}</h4></td>
       </tr>
