@@ -178,8 +178,10 @@
         <tr>
           <!--项目名称-->
           <td><h4><i class="cube icon teal"></i><a target="_blank" v-bind:href="item.url">{{ item.name }}</a></h4></td>
+          <!--项目官网-->
+          <td><h4><a target="_blank" v-bind:href="item.url"><i class="internet explorer icon teal"></i>项目官网</a></h4></td>
           <!--项目周期-->
-          <td><h4>{{ item.duration }}</h4></td>
+          <td class="right aligned"><h4>{{ item.duration }}</h4></td>
           <!--担任职位-->
           <td class="right aligned"><h4>{{ item.title }}</h4></td>
           <!--所在企业-->
@@ -188,7 +190,7 @@
 
         <!--项目简介-->
         <tr>
-          <td colspan="4">
+          <td colspan="5">
             <!--简介-->
             <h5 class="cv-fix-content-tab4"><i class="bell teal icon"></i>简介: {{ item.brief }}</h5>
             <!--项目技术栈-->
@@ -226,6 +228,8 @@
       <tr>
         <!--项目名称-->
         <td><h4><i class="cube icon teal"></i><a target="_blank" v-bind:href="item.url">{{ item.name }}</a></h4></td>
+        <!--项目官网-->
+        <td><h4><a target="_blank" v-bind:href="item.url"><i class="internet explorer icon teal"></i>项目官网</a></h4></td>
         <!--项目周期-->
         <td><h4>{{ item.duration }}</h4></td>
         <!--担任职位-->
@@ -236,7 +240,7 @@
 
       <!--项目简介-->
       <tr>
-        <td colspan="4">
+        <td colspan="5">
           <!--简介-->
           <h5 class="cv-fix-content-tab4"><i class="bell teal icon"></i>简介: {{ item.brief }}</h5>
           <!--项目技术栈-->
