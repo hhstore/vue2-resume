@@ -1,0 +1,160 @@
+{
+  "profile": {
+    "name": "小明",
+    "email": "xiaoming@gmail.com",
+    "mobile": "171xxxxx",
+    "birthday": "19xx.12",
+    "address": "上海•xx",
+    "website": {
+      "github": "github.com/xxxx",
+      "blog": "xxxx.net",
+      "zhihu": "zhihu.com/people/xxxx",
+      "douban": "douban.com/people/xxxx"
+    },
+    "expect": {
+      "position": "后台开发工程师",
+      "location": "上海",
+      "salary": "250k+(面议)"
+    },
+    "status": "已离职"
+  },
+  "edu": [
+    {
+      "school": "THU大学",
+      "major": "xxxx专业",
+      "duration": "200x.09-201x.06",
+      "edu_level": "统招本科",
+      "cet_level": "英语6级"
+    }
+  ],
+  "work": [
+    {
+      "company": "xxxx有限公司",
+      "url": "http://www.xxxx.com.cn/",
+      "corp_status": "A轮",
+      "corp_type": "xx 行业",
+      "location": "城市",
+      "duration": "201x.05 - 201x.04",
+      "title": "高级软件工程师",
+      "info": [
+        "任职xxx, 负责xxxx",
+        "主导xxxx, 组织xxx, 参与xxx, 有比较丰富的xxxx经验"
+      ]
+    },
+    {
+      "company": "xxxx有限公司",
+      "url": "http://www.xxxx.me/",
+      "corp_status": "B轮",
+      "corp_type": "xx 行业",
+      "location": "城市",
+      "duration": "201x.05 - 201x.04",
+      "title": "开发工程师",
+      "info": [
+        "参与xxxx开发",
+        "负责xxxx开发"
+      ]
+    }
+  ],
+  "project": {
+    "working": [
+      {
+        "name": "xxxx App",
+        "company": "xxxx 有限公司",
+        "title": "项目经理/产品经理",
+        "url": "http://www.xxxx.com.cn/",
+        "duration": "201x.11 - 201x.04",
+        "brief": "基于xxxx, 实现的xxxx App. 解决: xxxxx 等需求痛点.",
+        "tech_architecture": "ES6 + React-Native + Git",
+        "content": [
+          {
+            "item": "职责:",
+            "desc": [
+              "管理: xxxxx",
+              "开发: xxxx开发"
+            ]
+          },
+          {
+            "item": "成果:",
+            "desc": [
+              "产品调研: xxxxxxx.",
+              "App 架构设计: xxxxxx."
+            ]
+          }
+        ]
+      }
+    ],
+    "part_time": [
+      {
+        "name": "xxxxx 系统",
+        "company": "xxxx有限公司",
+        "title": "开发工程师",
+        "url": "",
+        "duration": "201x.12 - 201x.05",
+        "brief": "xxxxx 产品",
+        "tech_architecture": "Python3 + Django + Git",
+        "content": [
+          {
+            "item": "成果:",
+            "desc": [
+              "开发: xxxx模块, xxxxx模块."
+            ]
+          }
+        ]
+      }
+    ],
+    "personal": [
+      {
+        "name": "vue2-resume",
+        "url": "github.com/hhstore/vue2-resume",
+        "tech_main_type": "Vue.js",
+        "brief": "基于 vue.js + semantic-ui 实现的简历生成工具"
+      },
+      {
+        "name": "lagou-spider",
+        "url": "github.com/hhstore/lagou-spider",
+        "tech_main_type": "Python",
+        "brief": "Python3实现:拉勾网爬虫(登录验证,爬取企业,招聘信息等)"
+      },
+      {
+        "name": "annotated-py-Flask",
+        "url": "github.com/hhstore/annotated-py-Flask",
+        "tech_main_type": "Python",
+        "brief": "Flask (web框架)源码(v0.1, v0.5, v0.10)注解, 架构剖析图"
+      },
+      {
+        "name": "annotated-go-macaron",
+        "url": "github.com/hhstore/annotated-go-macaron",
+        "tech_main_type": "Go",
+        "brief": "macaron (web 框架)源码注解"
+      }
+    ]
+  },
+  "honour": [
+    {
+      "item": "荣誉1",
+      "date": "201x-10-11",
+      "desc": "xxxxxxxxx"
+    },
+    {
+      "item": "荣誉2",
+      "date": "201x-10-11",
+      "desc": "xxxxxxxxx"
+    }
+  ],
+  "etc": [
+    {
+      "title": "skills",
+      "desc": [
+        "开发语言: Python(熟练), Go/Javascript(ES6)/Nodejs/C(一般), Java/C++(了解)",
+        "web 前端: 熟悉 Vue.js/Bootstrap/Webpack/Gulp/H5/CSS3等"
+      ]
+    },
+    {
+      "title": "summary",
+      "desc": [
+        "沟通能力: 良好. ",
+        "团队管理/项目管理: 有一定经验."
+      ]
+    }
+  ]
+}
