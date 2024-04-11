@@ -18,7 +18,7 @@
         <h1 class="ui teal header"> {{ cv.profile.name }} </h1>
       </div>
       <div class="four wide column right aligned">
-        <h3>期望薪资: {{ cv.profile.expect.salary }}</h3>
+<!--        <h3>期望薪资: {{ cv.profile.expect.salary }}</h3>-->
       </div>
     </div>
 
@@ -39,7 +39,7 @@
       <tr>
         <td>
           <h5>
-            <i class="male icon teal"></i>{{ cv.profile.birthday }}
+            <!--            <i class="male icon teal"></i>{{ cv.profile.birthday }}-->
             <i class="marker icon teal"></i>{{ cv.profile.address }}
           </h5>
         </td>
