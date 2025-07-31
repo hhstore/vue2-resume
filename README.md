@@ -1,42 +1,41 @@
-# vue2-resume
+# vue-resume
 
-## 说明:
+## vue3-resume
 
-- 基于 `vue2.js` 和 `semantic-ui` 实现的 本地 `简历` 生成工具.
-- 支持`导出PDF`(利用浏览器的导出功能)
-- 支持`打印`
+- 项目: [vue3-resume](packages/vue3-resume/)
+- ✅ 基于 Vue3 实现的简历生成器, 支持导出 PDF
+- ✅ 重构 vue2-resume 的代码, 使其更符合 Vue3 的最佳实践
 
-## 使用方法:
+## vue2-resume
 
-### 1. 安装+启动:
+- 项目: [vue2-resume](packages/vue2-resume/)
 
-- 安装:
+- ✅ 基于 Vue2 实现的简历生成器, 支持导出 PDF
 
-```bash
+```ruby
 
-# 下载本项目:
-git clone git@github.com:hhstore/vue2-resume.git
+# 安装依赖
+task v2:install
 
-# 切换到项目目录:
-cd vue2-resume
-
-# 安装依赖包:
-make install
-
-# 启动:
-make run
+# 启动项目
+task v2:run
 
 ```
 
-- 浏览器查看简历: `http://localhost:8080/#/`
+- ✅ 简历预览效果
 
-### 2. 自主修改简历模板:
-
-- 简历内容配置文件: `./src/assets/cv.json`
-- 项目启动后, 简历页面会随配置文件修改而自动刷新
+![cv](./packages/vue2-resume//doc/cv.png)
 
 
-### 3. 简历打印预览效果:
 
-![cv](./doc/cv.png)
 
+## 项目结构
+
+- npm workspaces: 使用 npm workspaces 管理多个子项目
+
+```ruby
+# 初始化工作区
+npm init -w
+bun init
+
+```

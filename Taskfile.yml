@@ -1,0 +1,114 @@
+version: "3"
+
+includes:
+  v3:
+    aliases: ["vue3"]
+    taskfile: packages/vue3-resume/
+    dir: packages/vue3-resume/
+    optional: true
+
+  v2:
+    aliases: ["vue2"]
+    taskfile: packages/vue2-resume/
+    dir: packages/vue2-resume/
+    optional: true
+
+#
+# global vars: https://taskfile.dev/#/usage?id=variables
+#
+vars:
+  VAR1: "some-var"
+
+# global env:
+env:
+  ENV1: testing
+
+# env file:
+dotenv:
+  - .env
+
+################################################################################################
+
+tasks:
+  default:
+    cmds:
+      - task: install
+      - task: run
+
+  init:
+    cmds:
+      - cp .env.local .env
+
+  ############################################################################
+
+  install:
+    aliases: ["i"]
+    cmds:
+      - bun install
+
+  run:
+    aliases: ["r", "dev"]
+    cmds:
+      - echo "环境变量 ${VUE_APP_DEBUG}"
+      - bun run dev --trace-warnings
+      # - pnpm run dev --trace-warnings
+    env:
+      NODE_ENV: development
+      VUE_APP_DEBUG: "true"
+
+  run:prod:
+    aliases: ["rp"]
+    cmds:
+      - echo "环境变量 ${VUE_APP_DEBUG}"
+      - bun run dev
+    env:
+      VUE_APP_DEBUG: "false"
+
+  ############################################################################
+
+  node:init:
+    cmds:
+      - curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash -s -- --force-install
+      - fnm ls-remote | grep v16.
+      - fnm install v16.13.1
+      - fnm alias default v16.13.1 #设置默认版本
+      - npm install -g yarn
+
+  ##################################################################################################
+
+  quick:
+    aliases: ["q"]
+    cmds:
+      - task: cc
+      - task: push
+
+  # usage: task rc -- 2
+  rc:
+    aliases: ["reset:commit"]
+    cmds:
+      - git reset --soft HEAD~{{.CLI_ARGS}}
+      - task: c
+
+  cc:
+    cmds:
+      - task: commit
+      - task: commit
+
+  commit:
+    aliases: ["c"]
+    cmds:
+      - git add .
+      - git status
+      - git commit -m "update" --no-verify
+    ignore_error: true
+
+  pull:
+    cmds:
+      - git config pull.rebase false
+      - git pull origin main
+
+  push:
+    cmds:
+      - git push origin main --tags
+      - repo_url=`git remote -v | grep push | awk -F ":" '{print $2}' | awk -F ".git" '{print "https://github.com/"$1}'`; open $repo_url
+    ignore_error: true
