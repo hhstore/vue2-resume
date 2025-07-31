@@ -5,13 +5,16 @@ tasks:
     aliases: ["i"]
     cmds:
       # - bun install # TODO X: npm 有 bug, 改成 npm 安装
-      - pnpm install
+      # - pnpm install
+      - yarn # yarn 兼容性更好
 
   run:
     aliases: ["r", "dev"]
     cmds:
       - echo "环境变量 ${VUE_APP_DEBUG}"
-      - bun run dev
+      - bun run dev # yarn 安装, bun 运行
+      # - pnpm run dev
+      # - yarn run dev
       # - pnpm run dev --trace-warnings
     env:
       NODE_ENV: development

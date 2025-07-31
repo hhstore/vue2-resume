@@ -73,6 +73,11 @@ bun init
 ❯ node -v
 v22.14.0
 
+❯ yarn -v
+1.22.22
+
+❯ pnpm -v
+9.4.0
 ```
 
 - ✅ 安装 Bun

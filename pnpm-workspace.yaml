@@ -1,0 +1,6 @@
+#
+# pnpm workspace configuration
+#  - https://pnpm.io/pnpm-workspace_yaml
+#
+packages:
+  - "packages/vue3-resume" # 不支持 vue2 和 vue3 共存, 有编译报错

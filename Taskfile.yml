@@ -49,7 +49,8 @@ tasks:
   install:
     aliases: ["i"]
     cmds:
-      - bun install
+      # - bun install
+      - yarn # yarn 兼容性更好
 
   # new vue3 app
   new:
@@ -60,9 +61,16 @@ tasks:
       - bun install
     dir: packages/
 
-  clean:
+  clean:cache:
     cmds:
       - bun pm cache rm
+
+  clean:
+    aliases: ["cl", "rm"]
+    cmds:
+      # 清理 node_modules
+      - echo "清理 node_modules"
+      - find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
 
   run:
     aliases: ["r", "dev"]
