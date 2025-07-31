@@ -2,7 +2,6 @@
   "name": "vue-resume",
   "private": true,
   "workspaces": [
-    "packages/*"
   ],
   "devDependencies": {
     "@types/bun": "latest"

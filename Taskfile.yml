@@ -41,10 +41,28 @@ tasks:
 
   ############################################################################
 
+  install:bun:
+    aliases: ["ib", "i:bun"]
+    cmds:
+      - curl -fsSL https://bun.sh/install | bash
+
   install:
     aliases: ["i"]
     cmds:
       - bun install
+
+  # new vue3 app
+  new:
+    aliases: ["n"]
+    cmds:
+      - bun create vue@latest {{.CLI_ARGS}}
+      - cd {{.CLI_ARGS}}
+      - bun install
+    dir: packages/
+
+  clean:
+    cmds:
+      - bun pm cache rm
 
   run:
     aliases: ["r", "dev"]

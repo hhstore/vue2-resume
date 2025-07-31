@@ -26,16 +26,69 @@ task v2:run
 
 ![cv](./packages/vue2-resume//doc/cv.png)
 
+## Development
 
+### Project Structure
 
-
-## 项目结构
-
-- npm workspaces: 使用 npm workspaces 管理多个子项目
+- ✅ `npm workspaces`: 使用 `npm workspaces` 管理多个子项目
 
 ```ruby
 # 初始化工作区
-npm init -w
 bun init
 
 ```
+
+- 目录结构
+
+```ruby
+
+❯ tree ./packages/ -L 2
+./packages/
+├── vue2-resume
+│   ├── README.md
+│   ├── Taskfile.yml
+│   ├── build
+│   ├── bun.lock
+│   ├── config
+│   ├── doc
+│   ├── index.html
+│   ├── package.json
+│   ├── src
+│   └── test
+└── vue3-resume
+
+7 directories, 5 files
+```
+
+### Setup
+
+- ✅ 使用 [Bun](https://bun.sh/) 作为 JavaScript 运行时包管理器
+- ✅ 使用 [go-task](https://taskfile.dev/) 作为脚本构建工具
+
+```ruby
+
+❯ bun -v
+1.2.19
+
+❯ node -v
+v22.14.0
+
+```
+
+- ✅ 安装 Bun
+
+```ruby
+
+# Linux & MacOS 安装 Bun
+curl -fsSL https://bun.sh/install | bash
+
+# windows 用户可以使用以下命令安装 Bun
+powershell -c "irm bun.sh/install.ps1 | iex"
+
+# or
+task install:bun
+```
+
+## References
+
+- ✅ [vue docs](https://vuejs.org/guide/quick-start)

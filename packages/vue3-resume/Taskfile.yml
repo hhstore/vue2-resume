@@ -4,7 +4,8 @@ tasks:
   install:
     aliases: ["i"]
     cmds:
-      - bun install
+      # - bun install # TODO X: npm 有 bug, 改成 npm 安装
+      - pnpm install
 
   run:
     aliases: ["r", "dev"]
